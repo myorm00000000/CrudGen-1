@@ -9,12 +9,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\Output;
 use Symfony\Component\Console\Command\Command;
 use Sachoo\Bundle\CrudGenBundle\Generator\DoctrineCrudGenerator;
-use Sensio\Bundle\CrudGenBundle\Command\GenerateDoctrineCommand;
-use Sensio\Bundle\CrudGenBundle\Generator\DoctrineFormGenerator;
-use Sensio\Bundle\CrudGenBundle\Command\Helper\DialogHelper;
-use Sensio\Bundle\CrudGenBundle\Manipulator\RoutingManipulator;
+use Sensio\Bundle\GeneratorBundle\Command\GenerateDoctrineCommand;
+use Sensio\Bundle\GeneratorBundle\Generator\DoctrineFormGenerator;
+use Sensio\Bundle\GeneratorBundle\Command\Helper\DialogHelper;
+use Sensio\Bundle\GeneratorBundle\Manipulator\RoutingManipulator;
 use Doctrine\ORM\Mapping\MappingException;
-use Sensio\Bundle\CrudGenBundle\Command\Validators;
+use Sensio\Bundle\GeneratorBundle\Command\Validators;
 
 /**
  * Generates a CRUD for a Doctrine entity.
@@ -123,7 +123,7 @@ EOT
             '',
         ));
 
-        $entity = $dialog->askAndValidate($output, $dialog->getQuestion('The Entity shortcut name', $input->getOption('entity')), array('Sensio\Bundle\CrudGenBundle\Command\Validators', 'validateEntityName'), false, $input->getOption('entity'));
+        $entity = $dialog->askAndValidate($output, $dialog->getQuestion('The Entity shortcut name', $input->getOption('entity')), array('Sensio\Bundle\GeneratorBundle\Command\Validators', 'validateEntityName'), false, $input->getOption('entity'));
         $input->setOption('entity', $entity);
         list($bundle, $entity) = $this->parseShortcutNotation($entity);
 
@@ -149,7 +149,7 @@ EOT
             'Determine the format to use for the generated CRUD.',
             '',
         ));
-        $format = $dialog->askAndValidate($output, $dialog->getQuestion('Configuration format (yml, xml, php, or annotation)', $format), array('Sensio\Bundle\CrudGenBundle\Command\Validators', 'validateFormat'), false, $format);
+        $format = $dialog->askAndValidate($output, $dialog->getQuestion('Configuration format (yml, xml, php, or annotation)', $format), array('Sensio\Bundle\GeneratorBundle\Command\Validators', 'validateFormat'), false, $format);
         $input->setOption('format', $format);
 
         // route prefix
@@ -254,7 +254,7 @@ EOT
     protected function getDialogHelper()
     {
         $dialog = $this->getHelperSet()->get('dialog');
-        if (!$dialog || get_class($dialog) !== 'Sensio\Bundle\CrudGenBundle\Command\Helper\DialogHelper') {
+        if (!$dialog || get_class($dialog) !== 'Sensio\Bundle\GeneratorBundle\Command\Helper\DialogHelper') {
             $this->getHelperSet()->set($dialog = new DialogHelper());
         }
 

@@ -227,7 +227,7 @@ table.records_list tr td.tempsFort ul li{
 	float: none;
 	text-align: center;
 }
-table.records_list td.last ul li a, table.records_list tr td.tempsFort ul li a{
+table.records_list td.last ul li a{
 	display: block;
 	font-size: 11px;
 	height: 18px;
@@ -254,25 +254,7 @@ table.records_list td.last ul li a, table.records_list tr td.tempsFort ul li a{
 		color-stop(0.75, #EBEBEB)
 	);
 }
-table.records_list td.tempsFort ul li a.tempFortOui{
-	background-image: linear-gradient(top, #88DB9E 0%, #1C9434 84%);
-background-image: -o-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
-background-image: -moz-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
-background-image: -webkit-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
-background-image: -ms-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
 
-background-image: -webkit-gradient(
-	linear,
-	left top,
-	left bottom,
-	color-stop(0, #88DB9E),
-	color-stop(0.84, #1C9434)
-);
-	color: #FFF
-}
-table.records_list td.tempsFort ul li a.tempFortNon{
-	color: #666
-}
 table.records_list td.last ul li a:hover{
 	background: #CCC
 }
@@ -345,7 +327,7 @@ table.record_properties tr.odd th{
 table.record_properties tr.odd td{
 	background: #FFF
 }
-span.sousCritere {
+span.multiple {
     background-clip: padding-box;
     background-color: #E4E4E4;
     border: 1px solid #B4B4B4;
@@ -357,17 +339,17 @@ span.sousCritere {
     position: relative;
     float: left;
     background-image: linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
-	background-image: -o-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
-	background-image: -moz-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
-	background-image: -webkit-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
-	background-image: -ms-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);	
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #BABABA),
-		color-stop(0.75, #EBEBEB)
-	);
+		background-image: -o-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+		background-image: -moz-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+		background-image: -webkit-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+		background-image: -ms-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);	
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, #BABABA),
+			color-stop(0.75, #EBEBEB)
+		);
 }
 
 .paginator{
@@ -684,9 +666,7 @@ form ul{
 form ul.chzn-results{
 	color: #333;
 }
-#jaguar_adminbundle_eventsessiontype_date_date{
-	margin-right: 20px
-}
+
 .hiddenImageField{
 	padding: 0
 }
@@ -757,114 +737,6 @@ div.imageBox .TrashImage:hover{
 .formWithImage{
 	position: relative;
 }
-.formWithImage #jaguar_adminbundle_actutype{
-	min-height: 525px;
-	position: relative;
-}
-.formWithImage #tuto_images{
-	background: url("/bundles/sachoocrudgen/images/tuto_images.jpg") bottom left no-repeat;
-	width: 400px;
-	height: 267px;
-	position: absolute;
-	top: 290px;
-	right: 0;
-}
-form .home .video {
-	padding-top: 80px
-}
-form .home .video input, form .home .video textarea, form .home .recettes input, form .home .recettes textarea{
-	width: 296px;
-	font-size: 12px
-}
-form .home .recettes{
-	padding-top: 40px
-}
-form .home .recettes .formBlock{
-	display: block;
-	float: none;
-	width: 460px
-}
-form .home .navi a{
-	cursor: pointer;
-}
-form .home .tg1 label, form .home .tg2 label, form .home .tg3 label, form .home .tg4 label{
-	display: block;
-	font-size: 11px;
-	width: 224px;
-}
-form .home .tg1 .formBlock, form .home .tg2 .formBlock, form .home .tg3 .formBlock, form .home .tg4 .formBlock{
-	width: 224px;
-	padding: 3px 0 0 0;
-}
-form .home .tg1 input, form .home .tg2 input, form .home .tg3 input, form .home .tg4 input{
-	font-size: 11px;
-	width: 218px;
-}
-input#eccla_adminbundle_hometype_imageTg1, input#eccla_adminbundle_hometype_imageTg2, input#eccla_adminbundle_hometype_imageTg3, input#eccla_adminbundle_hometype_imageTg4{
-	font-size: 10px
-}
-form .home .recettes{
-	background: #ECECEC;
-	padding: 0;
-	height: 191px
-}
-form .home .recettes .recette{
-	padding-top: 50px;
-	height: 191px;
-	background-repeat: no-repeat;
-}
-form .home .recettes .recette label{
-	padding-left: 10px;
-}
-form .home .tg1, form .home .tg2, form .home .tg3, form .home .tg4{
-	background: #ECECEC;
-	padding: 0 3px;
-	width: 224px
-}
-form .home ul{
-	padding-top: 0
-}
-form .recette_error{
-	width: 460px;
-	position: absolute;
-	top: 335px;
-	left: 505px
-}
-form .recette_error ul{
-	padding: 0;
-	margin: 0
-}
-form .home .tg1 ul, form .home .tg2 ul, form .home .tg3 ul, form .home .tg4 ul{
-	padding: 0 4px 0 0 ;
-	margin: 0;
-	float: right;
-	line-height: 1.8em
-}
-form .home .hiddenImageField{
-	display: inline-block;
-}
-form .home .hiddenImageField span{
-	border-radius: 5px;
-	border: 1px solid #666;
-	width: 20px;
-	height: 20px;
-	background-color: #FFF;
-	background-position: 1px 1px;
-	margin-top: -1px;
-	margin-left: 3px;
-}
-form .home .hiddenImageField span:hover{
-	background-position: 1px -17px;
-}
-
-#eccla_adminbundle_commentrecettetype_comment{
-	width: 500px;
-	height: 100px
-}
-#eccla_adminbundle_trocannoncestype_description, #eccla_adminbundle_trocannoncestype_ingredients{
-	width: 500px;
-	height: 100px
-}
 
 input.inputColor{
     width: 70px;
@@ -876,18 +748,6 @@ input.inputColor{
     background: #ffffff;
     width: 300px;
     text-align: center;
-}
-#recetteSearch{
-	padding-bottom: 10px;
-}
-#recetteSearch input{
-	height: 22px;
-	padding: 2px;
-	border: 1px solid #CCC;
-	float: left;
-}
-
-
 }
 
 
