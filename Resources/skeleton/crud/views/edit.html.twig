@@ -1,0 +1,63 @@
+{{ "{% extends '"~ bundle ~"::layout.html.twig' %}" }}
+
+{{ '{% block content %}' }}
+{{ "{% form_theme edit_form '"~ bundle ~":Form:fields.html.twig' %}" }}
+<div class="top_infos">
+    {% if 'delete' in actions %}
+    <a class="delete_button" href="{{ "{{ path('"~ route_name_prefix ~"_delete', { 'id': entity.id }) }}" }}"><span>Delete</span></a>
+    {% endif %}
+    <h1>{{ entity }} edit</h1>
+</div>
+
+<form action="{{ "{{ path('"~ route_name_prefix ~"_update', { 'id': entity.id }) }}" }}" method="post" {{ "{{ form_enctype(edit_form) }}" }}>
+
+    {{ "{{ form_widget(edit_form) }}" }}  
+    
+    <p class="record_actions">
+        <a class="retour" href="{{ "{{ path('"~ route_name_prefix ~"') }}" }}">Back to the list</a>
+        <span class="arrow_button"><button type="submit">UPDATE</button></span>
+    </p>
+</form>
+
+
+{{ '{% endblock %}' }}
+
+
+{%- if 'text' in types %}
+{{ '{% block stylesheets %}' }}
+    {{ '{{ parent() }}' }}
+    <link rel="stylesheet" href="{{ "{{ asset('/bundles/sachoocrudgen/css/jquery.cleditor.css') }}" }}" />
+{{ '{% endblock %}' }}
+{%- endif %}
+
+{{ '{% block javascripts %}' }}
+{{ '{{ parent() }}' }}
+
+{%- if 'text' in types %}
+
+	<script type="text/javascript" src="{{ "{{ asset('/bundles/sachoocrudgen/js/jquery.cleditor.min.js') }}" }}"></script>
+	<script type="text/javascript" src="{{ "{{ asset('/bundles/sachoocrudgen/js/chosen.jquery.min.js') }}" }}"></script>
+
+{%- endif %}
+
+<script>
+    $(document).ready(function() {
+{%- for field, metadata in fields %}
+{%- if metadata.type == 'text' %}
+		$("#{{ form_type_name }}_{{ field }}").cleditor({
+			controls:   "bold italic underline strikethrough subscript superscript size | color highlight removeformat | bullets numbering | outdent indent | alignleft center alignright justify | undo redo | rule link unlink | cut copy paste pastetext | source",
+			width:      685,
+		});
+{%- endif %}
+{%- endfor %}
+{% if 'delete' in actions %}
+	$(".delete_button").click(function(){var answer = confirm('Are you sure that you want to permanently delete the selected entry?');return answer;});
+{% endif %}
+		$('select[multiple="multiple"]').each(function(){
+			$(this).chosen();
+		});
+    });
+</script>
+
+
+{{ '{% endblock %}' }}

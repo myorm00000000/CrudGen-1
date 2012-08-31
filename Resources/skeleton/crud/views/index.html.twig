@@ -1,0 +1,135 @@
+{{ "{% extends '"~ bundle ~"::layout.html.twig' %}" }}
+
+{{ '{% block content %}' }}
+<div class="top_infos">
+    {% if ('new' in actions) %}<a class="add_button" href="{{ "{{ path('"~ route_name_prefix ~"_new') }}" }}"><span>New</span></a>{% endif %}
+    <h1>{{ entity }}</h1>    
+</div>
+<table class="records_list"{% if 'rank' in field_names %} id="sortable"{% endif %}>
+    <thead>
+        <tr>
+        {%- if 'rank' in field_names %}
+
+			<th class="first"></th>
+
+        {%- endif %}
+
+        {%- if 'online' in field_names %}
+
+			<th class="{% if 'rank' not in field_names %}first {% endif %}pub">Publish</th>
+
+        {%- endif %}
+
+        {%- for field, metadata in fields %}
+
+        {%- if field != 'online' and field != 'rank' %}
+
+        	<th{% if loop.first and ('online' not in field_names and 'rank' not in field_names)  %} class="first"{% endif %}>{{ field|capitalize }}</th>
+
+		{%- endif %}
+
+        {%- endfor %}
+
+        	<th class="last">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{ '{% for entity in entities %}' }}
+        <tr{% if 'rank' in field_names %} id="{{ '{{ entity.id }}' }}"{% endif %}>
+
+        {%- if 'rank' in field_names %}
+
+			<td class="first rank"></td>
+
+        {%- endif %}
+
+		{%- if 'online' in field_names %}
+
+			<td class="{% if 'rank' not in field_names %}first {% endif %}pub">
+            	<a class="switch_{{ "{% if entity.online %}" }}on{{ "{% else %}" }}off{{ "{% endif %}" }}" href="{{ "{{ path('"~ route_name_prefix ~"_publish', { 'id': entity.id }) }}" }}">
+                	{{ "{% if entity.online %}" }}on{{ "{% else %}" }}off{{ "{% endif %}" }}
+                </a>
+            </td>
+
+        {%- endif %}
+
+        {%- for field, metadata in fields %}
+
+        {%- if metadata.type in ['date', 'datetime'] and (field != 'online' and field != 'rank') %}
+
+            <td{%- if loop.first and ('online' not in field_names and 'rank' not in field_names) %} class="first"{%- endif %}>{{ '{% if entity.'~ field|replace({'_': ''}) ~' %}{{ entity.'~ field|replace({'_': ''}) ~'|date(\'Y-m-d H:i:s\') }}{% endif%}' }}</td>
+
+		{%- elseif metadata.type in ['text'] and (field != 'online' and field != 'rank') %}
+
+            <td{%- if loop.first and ('online' not in field_names and 'rank' not in field_names) %} class="first"{%- endif %}>{{ '{{ entity.'~ field|replace({'_': ''}) ~'|raw }}' }}</td>
+
+        {%- elseif field != 'online' and field != 'rank' %}
+
+            <td{%- if loop.first and ('online' not in field_names and 'rank' not in field_names) %} class="first"{%- endif %}>{{ '{{ entity.'~ field|replace({'_': ''}) ~' }}' }}</td>
+
+        {%- endif %}
+
+        {%- if loop.last %}
+
+            <td class="last">
+                <ul>
+                    <li>
+                        <a href="{{ "{{ path('"~ route_name_prefix ~"_show', { 'id': entity.id }) }}" }}">show</a>
+                    </li>
+
+                {%- if ('edit' in actions) %}
+
+                    <li>
+                        <a href="{{ "{{ path('"~ route_name_prefix ~"_edit', { 'id': entity.id }) }}" }}">edit</a>
+                    </li>
+
+                {%- endif %}
+
+                {%- if ('delete' in actions) %}
+
+                    <li class="trash_button"><a href="{{ "{{ path('"~ route_name_prefix ~"_delete', { 'id': entity.id }) }}" }}">Effacer</a></li>                    
+
+                {%- endif %}
+
+				</ul>
+			</td>
+
+        {%- endif %}
+    {%- endfor %}
+
+        </tr>
+    {{ '{% endfor %}' }}
+    </tbody>
+</table>
+
+{{ '{% endblock %}' }}
+
+{% if 'delete' in actions or 'rank' in field_names -%}
+{{ '{% block javascripts %}' }}
+{{ '{{ parent() }}' }}
+{% if 'rank' in field_names %}
+
+	<script type="text/javascript" src="{{ "{{ asset('/bundles/sachoocrudgen/js/jquery.tablednd_0_5.js') }}" }}"></script>
+
+{% endif %}
+<script type="text/javascript">
+$(document).ready(function() {
+{% if 'rank' in field_names %}
+	$("#sortable").tableDnD({
+		onDrop: function(table, row) {
+			$.ajax({
+				url: "{{ "{{ path('"~ route_name_prefix ~"_changeRank') }}" }}",
+				type: 'POST',
+				data: $.tableDnD.serialize()
+			});
+		},
+		dragHandle: "rank"
+	});
+{% endif %}
+{% if 'delete' in actions %}
+	$(".trash_button").click(function(){var answer = confirm('Are you sure that you want to permanently delete the selected entry?');return answer;});
+{% endif %}
+});
+</script>
+{{ '{% endblock %}' }}
+{%- endif %}

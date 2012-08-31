@@ -1,0 +1,73 @@
+{{ "{% extends '"~ bundle ~"::layout.html.twig' %}" }}
+
+{{ '{% block content %}' }}
+<div class="top_infos">
+	{% if 'edit' in actions %}
+    <a class="edit_button" href="{{ "{{ path('"~ route_name_prefix ~"_edit', { 'id': entity.id }) }}" }}"><span>Edit</span></a>
+    {% endif %}
+    {% if 'delete' in actions %}
+    <a class="delete_button" href="{{ "{{ path('"~ route_name_prefix ~"_delete', { 'id': entity.id }) }}" }}"><span>Delete</span></a>
+    {% endif %}
+    <h1>{{ entity }} / {{ '{{ entity.id }}' }}</h1>
+</div>
+
+<table class="record_properties">
+    <tbody>
+	{%- for field, metadata in fields %}
+
+	{%- if field != 'online' and field != 'rank' %}
+
+        <tr>
+            <th>{{ field|capitalize }}</th>
+
+        {%- if metadata.type in ['date', 'datetime'] %}
+
+            <td>{{ '{{ entity.'~ field|replace({'_': ''}) ~'|date(\'Y-m-d H:i:s\') }}' }}</td>
+
+		{%- elseif metadata.type in ['text'] %}
+
+            <td>{{ '{{ entity.'~ field|replace({'_': ''}) ~'|raw }}' }}</td>
+
+        {%- else %}
+
+            <td>{{ '{{ entity.'~ field|replace({'_': ''}) ~' }}' }}</td>
+
+        {%- endif %}
+
+        </tr>
+
+	{%- endif %}
+
+    {%- endfor %}
+
+    {%- if 'online' in field_names %}
+
+        <tr>
+            <th>Online</th>
+            <td class="pub">
+            	<a class="switch_{{ "{% if entity.online %}" }}on{{ "{% else %}" }}off{{ "{% endif %}" }}" href="{{ "{{ path('"~ route_name_prefix ~"_publish', { 'id': entity.id }) }}" }}">
+                	{{ "{% if entity.online %}" }}on{{ "{% else %}" }}off{{ "{% endif %}" }}
+                </a>
+            </td>
+        </tr>
+
+    {%- endif %}
+    </tbody>
+</table>
+
+<p class="record_actions">
+    <a class="retour" href="{{ "{{ path('"~ route_name_prefix ~"') }}" }}">Back to the list</a>
+</p>
+{{ '{% endblock %}' }}
+
+{{ '{% block javascripts %}' }}
+{{ '{{ parent() }}' }}
+<script type="text/javascript">
+$(document).ready(function() {
+{% if 'delete' in actions %}
+	$(".delete_button").click(function(){var answer = confirm('Are you sure that you want to permanently delete the selected entry?');return answer;});
+{% endif %}
+	$("tr:odd").addClass("odd");
+});
+</script>
+{{ '{% endblock %}' }}

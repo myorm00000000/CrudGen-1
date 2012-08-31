@@ -1,0 +1,53 @@
+{{ "{% extends '"~ bundle ~"::layout.html.twig' %}" }}
+
+{{ '{% block content %}' }}
+{{ "{% form_theme form '"~ bundle ~":Form:fields.html.twig' %}" }}
+<h1>{{ entity }} creation</h1>
+
+<form action="{{ "{{ path('"~ route_name_prefix ~"_create') }}" }}" method="post" {{ "{{ form_enctype(form) }}" }}>
+
+    {{ "{{ form_widget(form) }}" }}  
+    
+    <p class="record_actions">
+        <a class="retour" href="{{ "{{ path('"~ route_name_prefix ~"') }}" }}">Back to the list</a>
+        <span class="arrow_button"><button type="submit">CREATE</button></span>
+    </p>
+</form>
+
+
+{{ '{% endblock %}' }}
+
+
+{%- if 'text' in types %}
+{{ '{% block stylesheets %}' }}
+    {{ '{{ parent() }}' }}
+    <link rel="stylesheet" href="{{ "{{ asset('/bundles/sachoocrudgen/css/jquery.cleditor.css') }}" }}" />
+{{ '{% endblock %}' }}
+{%- endif %}
+
+
+{{ '{% block javascripts %}' }}
+{{ '{{ parent() }}' }}
+
+{%- if 'text' in types %}
+
+<script type="text/javascript" src="{{ "{{ asset('/bundles/sachoocrudgen/js/jquery.cleditor.min.js') }}" }}"></script>
+<script type="text/javascript" src="{{ "{{ asset('/bundles/sachoocrudgen/js/chosen.jquery.min.js') }}" }}"></script>
+<script>
+    $(document).ready(function() {
+{%- for field, metadata in fields %}
+{%- if metadata.type == 'text' %}
+		$("#{{ form_type_name }}_{{ field }}").cleditor({
+			controls:   "bold italic underline strikethrough subscript superscript size | color highlight removeformat | bullets numbering | outdent indent | alignleft center alignright justify | undo redo | rule link unlink | cut copy paste pastetext | source",
+			width:      685,
+		});
+{%- endif %}
+{%- endfor %}
+		$('select[multiple="multiple"]').each(function(){
+	    	$(this).chosen();
+	    });
+    });
+</script>
+
+{%- endif %}
+{{ '{% endblock %}' }}

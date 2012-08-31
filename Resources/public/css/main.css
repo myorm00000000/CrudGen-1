@@ -1,0 +1,1255 @@
+body {
+	background: #000 url("/bundles/sachoocrudgen/images/bg_body.jpg") top repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+section#wrapper{
+	width: 1030px;
+	margin: 0 auto;
+	position: relative;
+}
+header{
+	height: 100px;
+}
+a{
+	outline: none
+}
+ol, ul{
+	padding-left: 20px
+}
+button{
+	outline: none
+}
+#logo{
+	width: 300px;
+	height: 90px;
+	border: none
+}
+#logo a{
+	width: 300px;
+	height: 90px;
+	display: block;
+	outline: none;
+	color: #666;
+	border: 1px solid #666;
+	text-align: center;
+	text-decoration: none;
+	line-height: 4em;
+	margin-top: 8px;
+	margin-left: 30px
+	
+}
+
+ul#menu{
+	list-style: none;
+	background: url("/bundles/sachoocrudgen/images/bg_menu.jpg") top left repeat-x;
+	height: 46px;
+	-moz-border-radius: 8px 8px 0 0;
+	-webkit-border-radius: 8px 8px 0 0;
+	border-radius: 8px 8px 0 0;
+	padding: 0 10px;
+	font-size: 16px
+}
+ul#menu li{
+	float: left;	
+}
+ul#menu li a{
+	display: block;
+	height: 33px;
+	padding: 11px 12px 0;
+	text-decoration: none;
+	color: #333;
+	font-size: 12px
+}
+ul#menu li a:HOVER{
+	background: url("/bundles/sachoocrudgen/images/bg_menu_hover.png") repeat;
+	color: #000
+	
+}
+section.main-col{
+	background: #FFF;
+	padding: 30px;
+}
+h1{
+	font-size: 24px;
+	font-weight: bold;
+	color: #2B7EA8;
+	font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #35AEC4;
+	margin-bottom: 20px;
+}
+h2{
+	font-size: 18px;
+	font-weight: bold;
+	color: #2B7EA8;
+	font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-top: 20px
+}
+table.records_list{
+	width: 100%;
+	font-size: 11px;
+	border-left: 1px solid #BCBCBC;
+	border-right: 1px solid #BCBCBC;
+	border-top: 1px solid #666;
+	border-bottom: none;
+}
+table.records_list thead tr{
+	height: 30px;
+}
+table.records_list thead tr th{
+	padding: 0 5px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	background: url("/bundles/sachoocrudgen/images/bg_menu.jpg") top left repeat-x;
+	font-weight: bold;
+}
+table.records_list thead tr th.last{
+	width: 100px;
+	text-align: center;
+}
+table.records_list thead tr th.tempsFort{
+	width: 50px !important;
+	text-align: center
+}
+table.records_list thead tr th.pub{
+	width: 70px;
+	text-align: center;
+}
+table.records_list thead tr th.first{
+	border-left: 1px solid #666;
+}
+table.records_list thead tr th.pub{
+	width: 50px
+}
+table.records_list tbody tr td.pub a{
+	display: block;
+	width: 44px;
+	height: 20px;
+	text-indent: -9999px;
+	outline:none;
+	margin: 0 auto;
+}
+table.record_properties tbody tr td.pub a{
+	display: block;
+	width: 44px;
+	height: 20px;
+	text-indent: -9999px;
+	outline:none;
+}
+table tbody tr td.pub a.switch_on{
+	background: url("/bundles/sachoocrudgen/images/switch.png") top left no-repeat;
+}
+table tbody tr td.pub a.switch_off{
+	background: url("/bundles/sachoocrudgen/images/switch.png") bottom left no-repeat;
+}
+table.records_list tbody tr td{
+	padding: 0 5px;
+	border-right: 1px solid #BCBCBC;
+	border-bottom: 1px solid #BCBCBC;
+	border-top: 1px solid #FFF;
+	background: #ECECEC
+}
+table.records_list tbody tr td.rank{
+	background: #ECECEC url("/bundles/sachoocrudgen/images/move.png") center no-repeat;
+	width: 20px;
+	padding: 0;
+	cursor: move;
+}
+table.records_list tbody tr td.pub{
+	text-align: center;
+}
+table.records_list tbody tr td.last{
+	border-right: none;
+	position: relative;
+}
+table.records_list tbody tr td.last ul li.trash_button{
+	display: block;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	right: -28px;
+}
+table.records_list tbody tr td.last ul li.trash_button a{
+	display: block;
+	width: 18px;
+	height: 18px;
+	background-image: url("/bundles/sachoocrudgen/images/trash.jpg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	text-indent: -9999px;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	padding: 0 5px;
+	display: none;
+}
+table.records_list tbody tr td.last ul li.trash_button a:hover{
+	background-position: bottom center;
+	background-color: transparent;
+}
+table.records_list tbody tr:hover td.last ul li.trash_button a{
+	display: block;
+}
+table.records_list tbody tr:hover td{
+	background-color: #DDDDDD
+}
+table.records_list ul{
+	list-style: none;
+}
+table.records_list .last ul{
+	display: inline-block;
+	position: relative;
+	padding: 0
+}
+table.records_list td.last{
+	text-align: center
+}
+table.records_list td.image, table.records_list th.image {
+	text-align: center;
+	width: 60px;
+	vertical-align: middle;
+	padding: 0
+}
+table.records_list td.image img{
+	padding: 0;
+	margin: 0;
+	display: block;
+	margin: 1px
+}
+table.records_list td.last ul li{
+	float: left;
+	margin: 5px 2px;
+}
+table.records_list tr td.tempsFort ul li{
+	float: none;
+	text-align: center;
+}
+table.records_list td.last ul li a, table.records_list tr td.tempsFort ul li a{
+	display: block;
+	font-size: 11px;
+	height: 18px;
+	padding: 0 8px;
+	border: 1px solid #B4B4B4;
+	text-transform: capitalize;
+	font-weight: bolder;
+	color: #2B7EA8;
+	text-decoration: none;
+	-moz-box-shadow: 1px 1px 1px #FFF;
+	-webkit-box-shadow: 0 0 3px #FFF;
+	border-radius: 9px;
+	line-height: 1.7em;
+	background-image: linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -o-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -moz-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -webkit-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -ms-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #BABABA),
+		color-stop(0.75, #EBEBEB)
+	);
+}
+table.records_list td.tempsFort ul li a.tempFortOui{
+	background-image: linear-gradient(top, #88DB9E 0%, #1C9434 84%);
+background-image: -o-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
+background-image: -moz-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
+background-image: -webkit-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
+background-image: -ms-linear-gradient(top, #88DB9E 0%, #1C9434 84%);
+
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #88DB9E),
+	color-stop(0.84, #1C9434)
+);
+	color: #FFF
+}
+table.records_list td.tempsFort ul li a.tempFortNon{
+	color: #666
+}
+table.records_list td.last ul li a:hover{
+	background: #CCC
+}
+div.top_infos{
+	position: relative;
+	border-bottom: 1px solid #2B7Ea8;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+div.top_infos h1{
+	width: 400px;
+	border: none;
+	margin-bottom: 0
+	
+}
+div.top_infos .add_button, div.top_infos .delete_button, div.top_infos .edit_button, div.top_infos .extract_button, div.top_infos .retour{
+	float: right;
+	margin-left: 20px
+}
+p.record_actions{
+	margin-top: 30px;
+	padding-top: 20px;
+	position: relative;
+	border-top: 1px solid #CCC;
+	overflow: hidden;
+}
+p.record_actions a.retour{
+	display: block;
+	float: left;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #2B7EA8;
+	padding-top: 3px
+}
+p.record_actions a.retour:hover{
+	text-decoration: none;
+	color: #666;
+}
+p.record_actions span.arrow_button{
+	float: right
+}
+p.record_actions a.arrow_button{
+	float: right
+}
+table.record_properties{
+	border: 1px solid #999;
+	margin: 0 auto;
+	padding: 2px;
+	box-shadow: 0 0 3px #666;
+	width: 970px;
+}
+
+table.record_properties th{
+	width: 20%;
+	font-weight: bold;
+	padding: 10px;
+	border-right: 2px solid #FFF;
+	background: #CCC
+}
+table.record_properties td{
+	width: 80%;
+	line-height: 1.2em;
+	padding: 10px;
+	background: #E1E1E1
+}
+
+table.record_properties tr.odd th{
+	background: #FFF
+}
+table.record_properties tr.odd td{
+	background: #FFF
+}
+span.sousCritere {
+    background-clip: padding-box;
+    background-color: #E4E4E4;
+    border: 1px solid #B4B4B4;
+    border-radius: 3px;
+    color: #333333;
+    line-height: 13px;
+    margin: 3px 0 3px 5px;
+    padding: 3px 6px;
+    position: relative;
+    float: left;
+    background-image: linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -o-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -moz-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -webkit-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);
+	background-image: -ms-linear-gradient(bottom, #BABABA 0%, #EBEBEB 75%);	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #BABABA),
+		color-stop(0.75, #EBEBEB)
+	);
+}
+
+.paginator{
+	background: url("/bundles/sachoocrudgen/images/bg_menu.jpg") top left repeat-x;
+	display: inline-block;
+	overflow: hidden;
+	padding: 3px;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	box-shadow:  0 0 2px #666;
+	float: right;
+	margin-bottom: 10px;
+	vertical-align: middle;
+	text-align: center;
+}
+.paginator a, .paginator span{
+	display: block;
+	float: left;
+	padding: 0 3px;
+	font-size: 12px;
+	text-decoration: none;
+	color: #FFF;
+	margin: 0 1px;
+	
+}
+.paginator a{
+	border: 1px solid #666;
+}
+.paginator a:hover{
+	border: 1px solid #FFF
+}
+.paginator span.current{
+	font-weight: bold;
+	margin: 0 3px;
+	background: #FFF;
+	color: #666;
+	border: 1px solid #666;
+}
+.paginator .last, .paginator .first{
+	color: #444
+}
+.paginator .next, .paginator .prev{
+	font-weight: bold;
+}
+p.limit a{
+	color: #666;
+	text-decoration: none
+}
+p.limit a:hover{
+	color: #000
+}
+/*********** BOUTONS ***********/
+
+a.arrow_button, span.arrow_button {
+    background: url("/bundles/sachoocrudgen/images/bg_arrow_right.png") no-repeat right top;
+    border: none;
+    color: #FFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 2.7em;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-right: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+span.arrow_button {
+    line-height: normal;
+    padding-left: 4px;
+}
+
+a.arrow_button span, span.arrow_button input, span.arrow_button button {
+    background: url("/bundles/sachoocrudgen/images/bg_arrow_left.jpg") no-repeat left top;
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 28px;
+    padding-left: 9px;
+    padding-right: 8px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0
+}
+a.arrow_button:hover, span.arrow_button:hover {
+    background-position: right bottom;
+}
+a.arrow_button:hover span, span.arrow_button:hover input, span.arrow_button:hover button {
+    background-position: left bottom;
+    color: #FFF;
+}
+
+
+
+
+
+a.export-link{
+    display: block;
+    float: right;
+    height: 33px;
+    padding: 15px 55px 0 0;
+    margin-bottom: 15px;
+    background: url("/bundles/sachoocrudgen/images/btn_xls.png") no-repeat top right;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+a.export-link:hover{
+    background-position: bottom right;
+}
+
+
+
+a.add_button, span.add_button {
+    background: url("/bundles/sachoocrudgen/images/bg_add_right.jpg") no-repeat right top;
+    border: none;
+    color: #FFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 2.7em;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-right: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+span.add_button {
+    line-height: normal;
+    padding-left: 4px;
+}
+
+a.add_button span, span.add_button input, span.add_button button {
+    background: url("/bundles/sachoocrudgen/images/bg_add_left.jpg") no-repeat left top;
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 28px;
+    padding-left: 21px;
+    padding-right: 8px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+a.add_button:hover, span.add_button:hover {
+    background-position: right bottom;
+}
+a.add_button:hover span, span.add_button:hover input, span.add_button:hover button {
+    background-position: left bottom;
+    color: #FFF;
+}
+
+a.extract_button, span.extract_button {
+    background: url("/bundles/sachoocrudgen/images/bg_extract_right.jpg") no-repeat right top;
+    border: none;
+    color: #FFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 2.7em;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-right: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+span.extract_button {
+    line-height: normal;
+    padding-left: 4px;
+}
+
+a.extract_button span, span.extract_button input, span.extract_button button {
+    background: url("/bundles/sachoocrudgen/images/bg_extract_left.jpg") no-repeat left top;
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 28px;
+    padding-left: 21px;
+    padding-right: 8px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+a.extract_button:hover, span.extract_button:hover {
+    background-position: right bottom;
+}
+a.extract_button:hover span, span.extract_button:hover input, span.extract_button:hover button {
+    background-position: left bottom;
+    color: #FFF;
+}
+
+
+
+a.delete_button, span.delete_button {
+    background: url("/bundles/sachoocrudgen/images/bg_delete_right.jpg") no-repeat right top;
+    border: none;
+    color: #FFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 2.7em;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-right: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+span.delete_button {
+    line-height: normal;
+    padding-left: 4px;
+}
+
+a.delete_button span, span.delete_button input, span.delete_button button {
+    background: url("/bundles/sachoocrudgen/images/bg_delete_left.jpg") no-repeat left top;
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 28px;
+    padding-left: 21px;
+    padding-right: 8px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+a.delete_button:hover, span.delete_button:hover {
+    background-position: right bottom;
+}
+a.delete_button:hover span, span.delete_button:hover input, span.delete_button:hover button {
+    background-position: left bottom;
+    color: #FFF;
+}
+
+
+
+a.edit_button, span.edit_button {
+    background: url("/bundles/sachoocrudgen/images/bg_edit_right.jpg") no-repeat right top;
+    border: none;
+    color: #FFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 2.7em;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-right: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+span.edit_button {
+    line-height: normal;
+    padding-left: 4px;
+}
+
+a.edit_button span, span.edit_button input, span.edit_button button {
+    background: url("/bundles/sachoocrudgen/images/bg_edit_left.jpg") no-repeat left top;
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 28px;
+    padding-left: 21px;
+    padding-right: 8px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+a.edit_button:hover, span.edit_button:hover {
+    background-position: right bottom;
+}
+a.edit_button:hover span, span.edit_button:hover input, span.edit_button:hover button {
+    background-position: left bottom;
+    color: #FFF;
+}
+
+
+/********* FORMULAIRES ************/
+
+form >div >div >label, form div.formBlock > label{
+	display: inline-block;
+	width: 145px;
+	vertical-align: top;
+	font-weight: bold;
+	color: #2B7EA8;
+	padding-top: 2px
+}
+form >div >div, form div.formBlock{
+	padding: 3px
+}
+form >div >div >div{
+	display: inline-block;
+	width: 500px;	
+}
+form >div >div >div >div{
+	float: left;
+	display: block;
+	width: 200px
+}
+form >div >div >input, form >div >div >textarea{
+	width: 220px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.eventForm select{
+	width: 310px	
+}
+form ul{
+	list-style: none;
+	color: red;
+	font-size: 11px;
+	font-weight: bold;
+	padding-top: 10px;
+	margin-left: 130px
+}
+form ul.chzn-results{
+	color: #333;
+}
+#jaguar_adminbundle_eventsessiontype_date_date{
+	margin-right: 20px
+}
+.hiddenImageField{
+	padding: 0
+}
+.hiddenImageField span{
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin-top: 5px;
+	margin-left: 5px;
+	cursor: pointer;
+	color: #2B7EA8;
+	text-decoration: underline;
+	background: url("/bundles/sachoocrudgen/images/pen.jpg") top left no-repeat;
+	text-indent: -9999px
+}
+.hiddenImageField span:hover{
+	text-decoration: none;
+	background-position: left bottom
+}
+.hiddenImageField input{
+	display: none
+}
+
+div.showImage{
+	background: url("/bundles/sachoocrudgen/images/loupe.png") top left no-repeat;
+	width: 45px;
+	height: 36px;
+	position: relative;
+	margin: 0;
+	margin-top: -5px;
+	cursor: pointer;
+	padding: 0
+}
+div.showImage:hover{
+	background-position: bottom;
+}
+div.showImage img{
+	position: absolute;
+	left: 50px;
+	display: none;
+	z-index: 100;
+	top: -50%;
+	border: 1px solid #FFF;
+	box-shadow: 0 0 3px #333
+}
+div.showImage:HOVER img{
+	display: block
+}
+div.imageBox{
+	position: relative;
+	margin:0;
+	padding: 0
+}
+div.imageBox .TrashImage{
+	background: url("/bundles/sachoocrudgen/images/trash.jpg") top left no-repeat;
+	display: block;
+	height: 18px;
+	width: 18px;
+	text-indent: -9999px;
+	position: absolute;
+	left: 75px;
+	top: 5px
+	
+}
+div.imageBox .TrashImage:hover{
+	background-position: bottom left;
+}
+.formWithImage{
+	position: relative;
+}
+.formWithImage #jaguar_adminbundle_actutype{
+	min-height: 525px;
+	position: relative;
+}
+.formWithImage #tuto_images{
+	background: url("/bundles/sachoocrudgen/images/tuto_images.jpg") bottom left no-repeat;
+	width: 400px;
+	height: 267px;
+	position: absolute;
+	top: 290px;
+	right: 0;
+}
+form .home .video {
+	padding-top: 80px
+}
+form .home .video input, form .home .video textarea, form .home .recettes input, form .home .recettes textarea{
+	width: 296px;
+	font-size: 12px
+}
+form .home .recettes{
+	padding-top: 40px
+}
+form .home .recettes .formBlock{
+	display: block;
+	float: none;
+	width: 460px
+}
+form .home .navi a{
+	cursor: pointer;
+}
+form .home .tg1 label, form .home .tg2 label, form .home .tg3 label, form .home .tg4 label{
+	display: block;
+	font-size: 11px;
+	width: 224px;
+}
+form .home .tg1 .formBlock, form .home .tg2 .formBlock, form .home .tg3 .formBlock, form .home .tg4 .formBlock{
+	width: 224px;
+	padding: 3px 0 0 0;
+}
+form .home .tg1 input, form .home .tg2 input, form .home .tg3 input, form .home .tg4 input{
+	font-size: 11px;
+	width: 218px;
+}
+input#eccla_adminbundle_hometype_imageTg1, input#eccla_adminbundle_hometype_imageTg2, input#eccla_adminbundle_hometype_imageTg3, input#eccla_adminbundle_hometype_imageTg4{
+	font-size: 10px
+}
+form .home .recettes{
+	background: #ECECEC;
+	padding: 0;
+	height: 191px
+}
+form .home .recettes .recette{
+	padding-top: 50px;
+	height: 191px;
+	background-repeat: no-repeat;
+}
+form .home .recettes .recette label{
+	padding-left: 10px;
+}
+form .home .tg1, form .home .tg2, form .home .tg3, form .home .tg4{
+	background: #ECECEC;
+	padding: 0 3px;
+	width: 224px
+}
+form .home ul{
+	padding-top: 0
+}
+form .recette_error{
+	width: 460px;
+	position: absolute;
+	top: 335px;
+	left: 505px
+}
+form .recette_error ul{
+	padding: 0;
+	margin: 0
+}
+form .home .tg1 ul, form .home .tg2 ul, form .home .tg3 ul, form .home .tg4 ul{
+	padding: 0 4px 0 0 ;
+	margin: 0;
+	float: right;
+	line-height: 1.8em
+}
+form .home .hiddenImageField{
+	display: inline-block;
+}
+form .home .hiddenImageField span{
+	border-radius: 5px;
+	border: 1px solid #666;
+	width: 20px;
+	height: 20px;
+	background-color: #FFF;
+	background-position: 1px 1px;
+	margin-top: -1px;
+	margin-left: 3px;
+}
+form .home .hiddenImageField span:hover{
+	background-position: 1px -17px;
+}
+
+#eccla_adminbundle_commentrecettetype_comment{
+	width: 500px;
+	height: 100px
+}
+#eccla_adminbundle_trocannoncestype_description, #eccla_adminbundle_trocannoncestype_ingredients{
+	width: 500px;
+	height: 100px
+}
+
+input.inputColor{
+    width: 70px;
+    padding-left: 12px;
+    background: #fff url('/bundles/sachoocrudgen/images/diese.png') left no-repeat;
+}
+.exempleColor{
+    color: #ffffff;
+    background: #ffffff;
+    width: 300px;
+    text-align: center;
+}
+#recetteSearch{
+	padding-bottom: 10px;
+}
+#recetteSearch input{
+	height: 22px;
+	padding: 2px;
+	border: 1px solid #CCC;
+	float: left;
+}
+
+
+}
+
+
+
+
+/*********** CORRECTION WEBKIT *****************/
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+	/** BOUTON **/
+    span.arrow_button {
+    	padding-right: 10px;
+	}
+	span.delete_button, span.add_button, span.extract_button {
+    	padding-right: 28px;
+	}
+}
+
+
+.chzn-container {
+  font-size: 13px;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 500px !important;
+}
+.chzn-container .chzn-drop {
+  background: #fff;
+  border: 1px solid #aaa;
+  border-top: 0;
+  position: absolute;
+  top: 29px;
+  left: 0;
+  -webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15);
+  -moz-box-shadow   : 0 4px 5px rgba(0,0,0,.15);
+  -o-box-shadow     : 0 4px 5px rgba(0,0,0,.15);
+  box-shadow        : 0 4px 5px rgba(0,0,0,.15);
+  z-index: 999;
+}
+/* @end */
+
+/* @group Single Chosen */
+.chzn-container-single .chzn-single {
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));
+  background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, white 50%);
+  background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%);
+  background-image: -o-linear-gradient(top, #eeeeee 0%,#ffffff 50%);
+  background-image: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+  background-image: linear-gradient(top, #eeeeee 0%,#ffffff 50%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius   : 4px;
+  border-radius        : 4px;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  border: 1px solid #aaa;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 0 0 8px;
+  color: #444;
+  text-decoration: none;
+}
+.chzn-container-single .chzn-single span {
+  margin-right: 26px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.chzn-container-single .chzn-single div {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius   : 0 4px 4px 0;
+  border-radius        : 0 4px 4px 0;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  background: #ccc;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
+  background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+  background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+  background-image: -o-linear-gradient(bottom, #ccc 0%, #eee 60%);
+  background-image: -ms-linear-gradient(top, #cccccc 0%,#eeeeee 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(top, #cccccc 0%,#eeeeee 60%);
+  border-left: 1px solid #aaa;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 18px;
+}
+.chzn-container-single .chzn-single div b {
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 0 1px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.chzn-container-single .chzn-search {
+  padding: 3px 4px;
+  margin: 0;
+  white-space: nowrap;
+}
+.chzn-container-single .chzn-search input {
+  background: #fff url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px;
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat 100% -20px, linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  margin: 1px 0;
+  padding: 4px 20px 4px 5px;
+  outline: 0;
+  border: 1px solid #aaa;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+.chzn-container-single .chzn-drop {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius   : 0 0 4px 4px;
+  border-radius        : 0 0 4px 4px;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+}
+/* @end */
+
+/* @group Multi Chosen */
+.chzn-container-multi .chzn-choices {
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background-image: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background-image: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background-image: -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+  background-image: -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  border: 1px solid #aaa;
+  margin: 0;
+  padding: 0;
+  cursor: text;
+  overflow: hidden;
+  height: auto !important;
+  height: 1%;
+  position: relative;
+}
+.chzn-container-multi .chzn-choices li {
+  float: left;
+  list-style: none;
+}
+.chzn-container-multi .chzn-choices .search-field {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+.chzn-container-multi .chzn-choices .search-field input {
+  color: #666;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 5px;
+  margin: 1px 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow   : none;
+  -o-box-shadow     : none;
+  box-shadow        : none;
+  width: 150px !important;
+}
+.chzn-container-multi .chzn-choices .search-field .default {
+  color: #999;
+}
+.chzn-container-multi .chzn-choices .search-choice {
+  -webkit-border-radius: 3px;
+  -moz-border-radius   : 3px;
+  border-radius        : 3px;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  background-color: #e4e4e4;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e4e4e4), color-stop(0.7, #eeeeee));
+  background-image: -webkit-linear-gradient(center bottom, #e4e4e4 0%, #eeeeee 70%);
+  background-image: -moz-linear-gradient(center bottom, #e4e4e4 0%, #eeeeee 70%);
+  background-image: -o-linear-gradient(bottom, #e4e4e4 0%, #eeeeee 70%);
+  background-image: -ms-linear-gradient(top, #e4e4e4 0%,#eeeeee 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(top, #e4e4e4 0%,#eeeeee 70%);
+  color: #333;
+  border: 1px solid #b4b4b4;
+  line-height: 13px;
+  padding: 3px 19px 3px 6px;
+  margin: 3px 0 3px 5px;
+  position: relative;
+}
+.chzn-container-multi .chzn-choices .search-choice span {
+  cursor: default;
+}
+.chzn-container-multi .chzn-choices .search-choice-focus {
+  background: #d4d4d4;
+}
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  width: 8px;
+  height: 9px;
+  font-size: 1px;
+  background: url(/bundles/sachoocrudgen/images/chosen-sprite.png) right top no-repeat;
+}
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close:hover {
+  background-position: right -9px;
+}
+.chzn-container-multi .chzn-choices .search-choice-focus .search-choice-close {
+  background-position: right -9px;
+}
+/* @end */
+
+/* @group Results */
+.chzn-container .chzn-results {
+  margin: 0 4px 4px 0;
+  max-height: 190px;
+  padding: 0 0 0 4px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.chzn-container-multi .chzn-results {
+  margin: -1px 0 0;
+  padding: 0;
+}
+.chzn-container .chzn-results li {
+  line-height: 80%;
+  padding: 7px 7px 8px;
+  margin: 0;
+  list-style: none;
+}
+.chzn-container .chzn-results .active-result {
+  cursor: pointer;
+}
+.chzn-container .chzn-results .highlighted {
+  background: #3875d7;
+  color: #fff;
+}
+.chzn-container .chzn-results li em {
+  background: #feffde;
+  font-style: normal;
+}
+.chzn-container .chzn-results .highlighted em {
+  background: transparent;
+}
+.chzn-container .chzn-results .no-results {
+  background: #f4f4f4;
+}
+.chzn-container .chzn-results .group-result {
+  cursor: default;
+  color: #999;
+  font-weight: bold;
+}
+.chzn-container .chzn-results .group-option {
+  padding-left: 20px;
+}
+.chzn-container-multi .chzn-drop .result-selected {
+  display: none;
+}
+/* @end */
+
+/* @group Active  */
+.chzn-container-active .chzn-single {
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+  -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
+  -o-box-shadow     : 0 0 5px rgba(0,0,0,.3);
+  box-shadow        : 0 0 5px rgba(0,0,0,.3);
+  border: 1px solid #5897fb;
+}
+.chzn-container-active .chzn-single-with-drop {
+  border: 1px solid #aaa;
+  -webkit-box-shadow: 0 1px 0 #fff inset;
+  -moz-box-shadow   : 0 1px 0 #fff inset;
+  -o-box-shadow     : 0 1px 0 #fff inset;
+  box-shadow        : 0 1px 0 #fff inset;
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
+  background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+  background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+  background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+  -webkit-border-bottom-left-radius : 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomleft : 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-left-radius : 0;
+  border-bottom-right-radius: 0;
+}
+.chzn-container-active .chzn-single-with-drop div {
+  background: transparent;
+  border-left: none;
+}
+.chzn-container-active .chzn-single-with-drop div b {
+  background-position: -18px 1px;
+}
+.chzn-container-active .chzn-choices {
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+  -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
+  -o-box-shadow     : 0 0 5px rgba(0,0,0,.3);
+  box-shadow        : 0 0 5px rgba(0,0,0,.3);
+  border: 1px solid #5897fb;
+}
+.chzn-container-active .chzn-choices .search-field input {
+  color: #111 !important;
+}
+/* @end */
+
+/* @group Disabled Support */
+.chzn-disabled {
+  cursor: default;
+  opacity:0.5 !important;
+}
+.chzn-disabled .chzn-single {
+  cursor: default;
+}
+.chzn-disabled .chzn-choices .search-choice .search-choice-close {
+  cursor: default;
+}
+
+/* @group Right to Left */
+.chzn-rtl { direction:rtl;text-align: right; }
+.chzn-rtl .chzn-single { padding-left: 0; padding-right: 8px; }
+.chzn-rtl .chzn-single span { margin-left: 26px; margin-right: 0; }
+.chzn-rtl .chzn-single div { 
+  left: 0; right: auto; 
+  border-left: none; border-right: 1px solid #aaaaaa;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius   : 4px 0 0 4px;
+  border-radius        : 4px 0 0 4px; 
+}
+.chzn-rtl .chzn-choices li { float: right; }
+.chzn-rtl .chzn-choices .search-choice { padding: 3px 6px 3px 19px; margin: 3px 5px 3px 0; }
+.chzn-rtl .chzn-choices .search-choice .search-choice-close { left: 5px; right: auto; background-position: right top;}
+.chzn-rtl.chzn-container-single .chzn-results { margin-left: 4px; margin-right: 0; padding-left: 0; padding-right: 4px; }
+.chzn-rtl .chzn-results .group-option { padding-left: 0; padding-right: 20px; }
+.chzn-rtl.chzn-container-active .chzn-single-with-drop div { border-right: none; }
+.chzn-rtl .chzn-search input {
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, #ffffff;
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);  
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  background: url('/bundles/sachoocrudgen/images/chosen-sprite.png') no-repeat -38px -20px, linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  padding: 4px 5px 4px 20px;
+}
