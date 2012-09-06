@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "sensio/generator-bundle": "2.1.*",
+        "sensio/generator-bundle": "2.1.*"
     },
     "autoload": {
         "psr-0": { "Sachoo\\Bundle\\CrudGenBundle": "" }
