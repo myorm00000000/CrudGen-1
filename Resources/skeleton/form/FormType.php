@@ -3,22 +3,28 @@
 namespace {{ namespace }}\Form{{ entity_namespace ? '\\' ~ entity_namespace : '' }};
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class {{ form_class }} extends AbstractType
 {
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
         {%- for field in fields %}
-        {%- if field != 'rank' and field != 'created' and field != 'updated' and field != 'online' %}
 
             ->add('{{ field }}')
 
-        {%- endif %}
         {%- endfor %}
 
         ;
+    }
+
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'data_class' => '{{ namespace }}\Entity{{ entity_namespace ? '\\' ~ entity_namespace : '' }}\{{ entity_class }}'
+        ));
     }
 
     public function getName()
