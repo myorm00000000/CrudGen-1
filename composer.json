@@ -1,5 +1,5 @@
 {
-    "name": "sachoo/crudgen-bundle",
+    "name": "slam310/crudgen-bundle",
     "description": "A cool crud generator based on sensio crud generator",
     "keywords": ["code generation"],
     "type": "sachoo-bundle",
@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "sensio/generator-bundle": "2.2.*"
+        "sensio/generator-bundle": "2.3.4"
     },
     "autoload": {
         "psr-0": { "Sachoo\\Bundle\\CrudGenBundle": "" }
